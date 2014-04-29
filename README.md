@@ -57,21 +57,5 @@ public class BoggleBoard
 
     // Returns a string representation of the board.
     public String toString()
-}
-
-The following test client takes the filename of a dictionary and the filename of a Boggle board as command-line arguments and prints out all valid words for the given board using the given dictionary.
-
-public static void main(String[] args)
-{
-    In in = new In(args[0]);
-    String[] dictionary = in.readAllStrings();
-    BoggleSolver solver = new BoggleSolver(dictionary);
-    BoggleBoard board = new BoggleBoard(args[1]);
-    int score = 0;
-    for (String word : solver.getAllValidWords(board))
-    {
-        StdOut.println(word);
-        score += solver.scoreOf(word);
-    }
-    StdOut.println("Score = " + score);
+    
 }
